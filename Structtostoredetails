@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+struct Student {
+    char name[100];
+    char usn[15];
+    char mobile[15];
+};
+
+int main() {
+    struct Student student;
+
+    printf("Enter student's name: ");
+    fgets(student.name, sizeof(student.name), stdin);
+    printf("Enter student's USN: ");
+    fgets(student.usn, sizeof(student.usn), stdin);
+    printf("Enter student's mobile number: ");
+    fgets(student.mobile, sizeof(student.mobile), stdin);
+
+    printf("\nStudent Information:\n");
+    printf("Name: %s", student.name);
+    printf("USN: %s", student.usn);
+    printf("Mobile: %s", student.mobile);
+
+    return 0;
+}
